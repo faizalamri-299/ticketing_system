@@ -9,10 +9,8 @@ $this->title = 'My Yii Application';
 ?>
 <div class="site-index">
     <div class="jumbotron">
-        <h1>YKTLJ, Modul Pentadbiran</h1>
+        <h1>Ticketing System </h1>
 
-        <p class="lead">1111.</p>
-
-        <p><a class="btn btn-lg btn-success" href="http://www.yiiframework.com">Get started with Yii</a></p>
+        <p class="lead">Holistics Lab</p>
     </div>
 </div>

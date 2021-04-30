@@ -37,22 +37,14 @@ AppAsset::register($this);
     ]);
     $menuItems = [
         ['label' => 'Home', 'url' => ['/site/index'],'visible' => !Yii::$app->user->isGuest],
-        ['label' => 'About', 'url' => ['/site/about'],'visible' => !Yii::$app->user->isGuest],
-        [   'label' => 'Gelanggang', 
-            'items' => [
-                 ['label' => 'Senarai Gelanggang', 'url' => ['/gelanggang/gelanggang-futsal']],
-                 ['label' => 'Tempahan Gelanggang', 'url' => '#'],
-                 ['label' => 'Jadual Gelanggang', 'url' => '#'],
-            ],'visible' => !Yii::$app->user->isGuest],
-
+        ['label' => 'Issues', 'url' => ['/report'],'visible' => !Yii::$app->user->isGuest], 
+        ['label' => 'Setting', 'items' => [
+                        ['label' => 'Company', 'url' => ['/company']],],'visible' => !Yii::$app->user->isGuest],     
     ];
     if (Yii::$app->user->isGuest) {
         $menuItems[] = ['label' => 'Signup', 'url' => ['/site/signup']];
-        $menuItems[] = ['label' => 'Login', 'items' => [
-                 ['label' => 'User', 'url' => ['/site/login']],
-                 ['label' => 'Admin', 'url' => ['/site/']],
-             ]
-         ];
+        $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
+
     } else {
         $menuItems[] = '<li>'
             . Html::beginForm(['/site/logout'], 'post')
